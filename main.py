@@ -12,7 +12,7 @@ import sys
 name = 'Mars'
 
 def main():
-    glutInit(sys.argv)
+    glutInit('aaa.txt')
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH)
     glutInitWindowSize(400,400)
     glutCreateWindow(name)
@@ -50,3 +50,5 @@ def display():
     glutSwapBuffers()
     return
 
+if __name__ == '__main__':
+	main()
