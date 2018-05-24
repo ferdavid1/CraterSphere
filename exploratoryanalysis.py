@@ -11,10 +11,13 @@ data = data[['LON_E', 'LAT', 'DiamKM']]
 
 
 lon, lat, diam = data['LON_E'], data['LAT'], data['DiamKM']
-def plot(x, title, xaxis, yaxis):
+def plot(x, title, xaxis, yaxis, y=False):
 	import matplotlib.pyplot as plt 
 	plt.figure()
-	plt.plot(x)
+	if y is not False:
+		plt.plot(x,y)
+	else:
+		plt.plot(x)
 	plt.title(title)
 	plt.xlabel(xaxis)
 	plt.ylabel(yaxis)
@@ -25,4 +28,4 @@ def plot(x, title, xaxis, yaxis):
 # plot(lon, 'Distribution of Crater Longitude', 'Index', 'Longitude of Crater')
 # plot(lat, 'Distribution of Crater Latitude', 'Index', 'Latitude of Crater')
 # plot(diam, 'Distribution of Crater Diameter', 'Index', 'Diameter of Crater')
-
+plot(lat, 'Latitude by Longitude', 'Latitude', 'Longitude', y=lon)
