@@ -10,7 +10,7 @@ def neighborhood_dist(lat1, lon1, lat2, lon2, eps=eps):
 
 def main():
 	data = pd.read_csv("Data.csv")
-	data = data[['LON_E', 'LAT', 'DiamKM']][:5000]
+	data = data[['LON_E', 'LAT', 'DiamKM']][:2000]
 	lon, lat, diam = data['LON_E'], data['LAT'], data['DiamKM']
 	G = nx.MultiGraph()
 	zipped = list(zip(lat, lon))
@@ -26,6 +26,7 @@ def main():
 	diam = [diam[ind] for ind in inds]
 	# print(len(list(G.edges())))
 	nx.draw(G, node_size=diam, with_labels=False)
-	plt.show()
+	# plt.show()
+	plt.savefig('CraterSize_and_connectedness_by_neighborhood_distance.png')
 
 main()
