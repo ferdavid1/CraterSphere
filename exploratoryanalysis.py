@@ -19,9 +19,10 @@ def plot(x, title, xaxis, yaxis):
 	plt.xlabel(xaxis)
 	plt.ylabel(yaxis)
 	plt.show()
-	plt.savefig(title + '.png')
+	# plt.savefig(title + '.png')
 
 # print(max(diam), min(diam), np.mean(diam), np.std(diam)) # 1164.22, 1.0, 3.55668639730795, 8.591981595119385
-plot(lon, 'Distribution of Crater Longitude', 'Index', 'Longitude of Crater')
-plot(lat, 'Distribution of Crater Latitude', 'Index', 'Latitude of Crater')
-plot(diam, 'Distribution of Crater Diameter', 'Index', 'Diameter of Crater')
+# plot(lon, 'Distribution of Crater Longitude', 'Index', 'Longitude of Crater')
+# plot(lat, 'Distribution of Crater Latitude', 'Index', 'Latitude of Crater')
+# plot(diam, 'Distribution of Crater Diameter', 'Index', 'Diameter of Crater')
+
